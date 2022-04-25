@@ -31,9 +31,7 @@ void criarMundo(){
 	obj = new World("Local World");
 
 
-	TheRing * ptr = TheRing::getInstanceOf();
-
-	ptr->sayIt();
+	TheRing::getInstanceOf()->sayIt();
 
 	obj->sayHi();
 
