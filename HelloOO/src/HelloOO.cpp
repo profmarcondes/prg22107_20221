@@ -13,7 +13,7 @@ using namespace std;
 
 void criarMundo();
 
-World g_obj;
+World g_obj("Global World");
 
 int main() {
 	cout << "Entrando na main! " << endl;
@@ -28,10 +28,20 @@ void criarMundo(){
 
 	World * obj;
 
-	obj = new World();
+	obj = new World("Local World");
+
+
+	TheRing::getInstanceOf()->sayIt();
 
 	obj->sayHi();
 
+	obj->nome("Mordor");
+
+	cout << "O novo mundo é " << obj->nome() << endl;
+
+	obj->sayHi();
+
+	delete obj;
 
 }
 

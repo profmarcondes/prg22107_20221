@@ -12,16 +12,26 @@
 #include <string>
 using namespace std;
 
-class World {
+#include "TheRing.h"
 
+class World {
+private:
 	string _nome;
+	//TheRing _precious;
 
 public:
 	World(string value);
-
 	void sayHi();
-
 	virtual ~World();
+
+	string nome() { return _nome; }
+	void nome(string value) { _nome = value; }
+
+private:
+	void sayIt(string what);
+
 };
 
 #endif /* WORLD_H_ */
+
+

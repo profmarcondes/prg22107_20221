@@ -10,17 +10,17 @@
 
 World::World(string value) {
 	_nome = value;
-	// TODO Auto-generated constructor stub
-	cout << "Hello " << _nome << "!" << endl;
-
+	sayIt("Hello");
 }
 
 void World::sayHi() {
-	cout << "Hi " << _nome << "!" << endl;
+	sayIt("Hi");
 }
 
 World::~World() {
-	// TODO Auto-generated destructor stub
-	cout << "Goodbye " << _nome << "!" << endl;
+	sayIt("Goodbye");
 }
 
+void World::sayIt(string what){
+	cout << what << " " << _nome << "!" << endl;
+}
